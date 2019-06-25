@@ -1,3 +1,4 @@
+
 ```graphql
 query {
   getAllBooks {
@@ -19,6 +20,23 @@ query {
 ```graphql
 query {
   getAllAuthors {
+    _id
+    firstName
+    lastName
+    age
+    books {
+      _id
+      title
+      description
+      language
+    }
+  }
+}
+```
+
+```graphql
+query {
+  getAuthor(_id: "5c5c423d4aef5c372833dc0c") {
     _id
     firstName
     lastName
